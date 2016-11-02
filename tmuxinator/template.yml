@@ -1,0 +1,23 @@
+name: 
+root: ~/Workspace/
+pre_window: nvm use stable
+
+windows:
+<% if @args.include?('') %>
+  - api:
+      layout: d79e,130x41,0,0[130x31,0,0,32,130x9,0,32{65x9,0,32,33,64x9,66,32,34}]
+      root: ~/Workspace/
+      panes:
+        - vim
+        - nodemon
+        - clear
+<% end %>
+<% if @args.include?('') %>
+  - pc-web:
+      layout: d79e,130x41,0,0[130x31,0,0,32,130x9,0,32{65x9,0,32,33,64x9,66,32,34}]
+      root: ~/Workspace/
+      panes:
+        - vim
+        - npm start
+        - clear
+<% end %>
