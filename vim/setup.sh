@@ -25,5 +25,5 @@ echo "setup vim plugins"
 # vim +PlugInstall >> /dev/null 2>&1
 vim +PlugInstall +qall
 
-cd "$vim_dir/bundle/tern_for_vim" 
+cd "$vim_dir/plugged/tern_for_vim" 
 nvm use stable && npm i
