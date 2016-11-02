@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-dale_conf=$HOME/.dale-config
 vim_dir=$HOME/.vim
 vim_conf=$HOME/.vimrc
 
@@ -14,7 +13,7 @@ if [ -e "$vim_conf" ]; then
     rm "$vim_conf"
 fi
 
-cp "$dale_conf/vim/.vimrc" "$vim_conf"
+cp "$common_conf/vim/.vimrc" "$vim_conf"
 
 if [ ! -d "$vim_dir/autoload/plug.vim" ]; then
     cd "$vim_dir"

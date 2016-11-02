@@ -1,8 +1,7 @@
 #!/bin/zsh
 
-dale_conf=~/.dale-config
-zsh_conf=~/.zshrc
-zsh_dir=~/.oh-my-zsh
+zsh_conf=$HOME/.zshrc
+zsh_dir=$HOME/.oh-my-zsh
 zsh_name=zsh
 
 echo "setup zsh"
@@ -15,5 +14,5 @@ if [ -f "$zsh_conf" ]; then
     rm "$zsh_conf"
 fi
 
-cp "$dale_conf/zsh/.zshrc" "$zsh_conf" 
+cp "$common_conf/zsh/.zshrc" "$zsh_conf" 
 . "$zsh_conf"

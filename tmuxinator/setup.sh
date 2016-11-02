@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-dale_conf=$HOME/.dale-config
 tmuxinator_dir=$HOME/.tmuxinator
 tmuxinator_conf=$HOME/.tmuxinator.zsh
 zsh_conf=$HOME/.zshrc
@@ -29,8 +28,8 @@ fi
 
 mkdir "$tmuxinator_dir"
 
-cp "$dale_conf/tmuxinator/.tmuxinator.zsh" "$tmuxinator_conf" 
-cp "$dale_conf/tmuxinator/template.yml" "$tmuxinator_dir/template.yml"
+cp "$common_conf/tmuxinator/.tmuxinator.zsh" "$tmuxinator_conf" 
+cp "$common_conf/tmuxinator/template.yml" "$tmuxinator_dir/template.yml"
 
 printf "\n\
 # tmuxinator \n\

@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-dale_conf=$HOME/.dale-config
 nvm_dir=$HOME/.nvm
 nvm_conf=$HOME/.nvmrc
 zsh_conf=$HOME/.zshrc
@@ -21,7 +20,7 @@ if [ -f "$nvm_conf" ]; then
     rm "$nvm_conf"
 fi
 
-cp "$dale_conf/nvm/.nvmrc" "$nvm_conf" 
+cp "$common_conf/nvm/.nvmrc" "$nvm_conf" 
 
 printf "\n\
 # nvm \n\

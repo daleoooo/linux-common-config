@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-dale_conf=$HOME/.dale-config
+common_conf=$HOME/.common-config
+
 setups=( zsh nvm tmux tmuxinator vim )
 
 if [ ! -x "/bin/tmux" ]; then
@@ -8,7 +9,7 @@ if [ ! -x "/bin/tmux" ]; then
 fi
 
 for setup in ${setups[@]}; do
-    . $dale_conf/$setup/setup.sh
+    . $common_conf/$setup/setup.sh
 done
 
-cp -r "$dale_conf/bin" $HOME/.bin
+cp -r "$common_conf/bin" $HOME/.bin
