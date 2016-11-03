@@ -85,3 +85,5 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Workspace 
+export WORKSPACE="${HOME}/Workspace"
