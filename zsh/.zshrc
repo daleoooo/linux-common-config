@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export SSO_USERNAME='zhangchi07'
 
 # Vim alias
 # alias vim='/usr/local/Cellar/vim/7.4.903/bin/vim'
@@ -59,14 +58,6 @@ plugins=(git)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${HOME}/.bin:${HOME}/bin:"
 
-# export MANPATH="/usr/local/man:$MANPATH"
-#
-# Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
-# export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
-# if [ -d "$GHC_DOT_APP" ]; then
-#   export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-# fi
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -84,12 +75,6 @@ fi
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# mnpm
-alias mnpm="npm --registry=http://r.npm.sankuai.com \
-    --cache=$HOME/.cache/mnpm \
-    --disturl=https://npm.taobao.org/dist \
-    --userconfig=$HOME/.mnpmrc"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
