@@ -15,7 +15,7 @@ set colorcolumn=80  " highlight the 80 column
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " ------------- remap
-imap ff <Esc>
+imap fg <Esc>
 let mapleader = ','
 nnoremap <C-l> gt
 nnoremap <C-h> gT
