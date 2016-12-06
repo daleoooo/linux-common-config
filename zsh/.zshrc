@@ -88,3 +88,6 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Workspace 
 export WORKSPACE="${HOME}/Workspace"
+
+# Timezone
+export TZ='Asia/Shanghai'
