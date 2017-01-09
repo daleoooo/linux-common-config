@@ -55,10 +55,13 @@ autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ai
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sw=4
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ts=4
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sts=4
-autocmd FileType javascript,html,css,xml set ai
-autocmd FileType javascript,html,css,xml set sw=2
-autocmd FileType javascript,html,css,xml set ts=2
-autocmd FileType javascript,html,css,xml set sts=2
+autocmd FileType javascript,html,css,xml,vue set ai
+autocmd FileType javascript,html,css,xml,vue set sw=4
+autocmd FileType javascript,html,css,xml,vue set ts=4
+autocmd FileType javascript,html,css,xml,vue set sts=4
+
+" ------------- vue to html
+autocmd BufNewFile,BufRead *.vue set filetype=html
 
 " ------------- file
 set confirm 
@@ -77,7 +80,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'mattn/emmet-vim'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'ternjs/tern_for_vim'
 Plug 'othree/vim-autocomplpop'
 Plug 'mileszs/ack.vim'
@@ -87,9 +89,11 @@ Plug 'honza/vim-snippets'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'posva/vim-vue'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'L9'
-
-" ------------- load plugins end
+" ------------- load plugins end 
 call plug#end()
 
 " ----------------------- filetype
@@ -123,9 +127,6 @@ map <Leader>n :MBEbp<cr>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" ----------------------- javascript-lairaries-syntax
-let g:used_javascript_libs = 'jquery,angularjs, react'
-
 " ----------------------- ack
 :map <F2> :Ack -i
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -143,3 +144,9 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+" ----------------------- vim css3 syntax
+augroup VimCSS3Syntax
+    autocmd!
+    autocmd FileType css setlocal iskeyword+=-
+augroup END
